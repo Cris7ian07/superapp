@@ -2,13 +2,13 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import IMCScreen from './IMCScreen';
-import QRCodeScreen from './QRCodeScreen';
-import TarefasScreen from './TarefasScreen';
-import MoedasScreen from './MoedasScreen';
-import CepScreen from './CepScreen';
-import ClimaScreen from './ClimaScreen';
-import PerfilScreen from './PerfilScreen';
+import IMCScreen from './src/screens/IMCScreen';
+import QRCodeScreen from './src/screens/QRCodeScreen';
+import TarefasScreen from './src/screens/TarefasScreen';
+import MoedasScreen from './src/screens/MoedasScreen';
+import CepScreen from './src/screens/CepScreen';
+import ClimaScreen from './src/screens/ClimaScreen';
+import PerfilScreen from './src/screens/PerfilScreen';
 
 const Stack = createNativeStackNavigator();
 
