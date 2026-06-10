@@ -6,7 +6,7 @@ export default function TarefasScreen() {
   const [tarefa, setTarefa] = useState('');
   const [lista, setLista] = useState([]);
 
-  // Carregar tarefas ao abrir a tela
+  
   useEffect(() => {
     carregarTarefas();
   }, []);
