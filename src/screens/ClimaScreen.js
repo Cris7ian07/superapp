@@ -1,35 +1,17 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, Button } from 'react-native';
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 
 export default function ClimaScreen() {
-  const [cidade, setCidade] = useState('');
-  const [temperatura, setTemperatura] = useState('');
-
-  async function buscarClima() {
-    try {
-      const resposta = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=SUA_CHAVE&units=metric`
-      );
-
-      const dados = await resposta.json();
-
-      setTemperatura(dados.main.temp);
-    } catch {
-      alert('Erro ao consultar clima');
-    }
-  }
-
   return (
-    <View>
-      <TextInput
-        placeholder="Cidade"
-        value={cidade}
-        onChangeText={setCidade}
-      />
-
-      <Button title="Buscar" onPress={buscarClima} />
-
-      <Text>Temperatura: {temperatura}°C</Text>
+    <View style={styles.container}>
+      <Text style={styles.texto}>☀️ Módulo de Consulta de Clima</Text>
+      <Text style={styles.subtexto}>Espaço reservado para a API do OpenWeatherMap.</Text>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#E0F7FA' },
+  texto: { fontSize: 20, fontWeight: 'bold', color: '#006064' },
+  subtexto: { fontSize: 14, color: '#00838F', marginTop: 10 }
+});
